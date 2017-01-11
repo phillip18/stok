@@ -7,11 +7,11 @@ class MaterialsController < ApplicationController
   end
 
   def new
-    @material = current_user.material.build
+    @material = Material.new
   end
 
   def create
-    @material = current_user.material.build(material_params)
+    @material = Material.new(material_params)
     
     if @material.save
       redirect_to materials_path
