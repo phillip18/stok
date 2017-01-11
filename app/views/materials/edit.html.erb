@@ -1,0 +1,22 @@
+<div id="page_wrapper">
+  <%= form_for @material do |f| %>
+
+    <% if @material.errors.any? %>
+      <div id="errors">
+        <h2> <%= pluralize(@material.errors.count, "Error")%> Stoped this post from saving </h2>
+        <ul>
+          <%= @material.errors.full_messages.each do |msg| %>
+            <li> <%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <p>
+      <%= f.label :nome %><br>
+      <%= f.text_field :nome%>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+  <% end %>
+</div>
