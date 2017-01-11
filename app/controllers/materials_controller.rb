@@ -1,16 +1,18 @@
 class MaterialsController < ApplicationController
-	before_action :find_material, only: [:edit, :show, :update, :destroy, :complete]
+	before_action :authenticate_user!, except: [:index, :show]
+  before_action :find_material, only: [:edit, :show, :update, :destroy, :complete]
 
   def index
     @material = Material.all.order('created_at DESC')
   end
 
   def new
-    @material = Material.new
+    @material = current_user.material.build
   end
 
   def create
-    @material = Material.new(material_params)
+    @material = current_user.material.build(material_params)
+    
     if @material.save
       redirect_to materials_path
     else
