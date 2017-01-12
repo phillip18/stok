@@ -13,11 +13,11 @@
   material e quantidade retirada/adicionada
 
 = Utilizamos
-´´´
+
 - Devise para autenticação
 - Bootstrap para Styling
 - Sqlite3
-´´´
+
 = Instalação normal
 
 No terminal, executar os seguintes comantos depois de baixar o projeto:
