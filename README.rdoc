@@ -1,4 +1,4 @@
-## Sistema para controle de almoxarifado com as seguintes funcionalidades
+== Sistema para controle de almoxarifado com as seguintes funcionalidades
 
 - Cadastro de usuário (login e senha)
 
@@ -12,13 +12,13 @@
   
   material e quantidade retirada/adicionada
 
-# Utilizamos
-```
--  Devise para autenticação
--  Bootstrap para Styling
--  Sqlite3
-```
-# Instalação normal
+= Utilizamos
+´´´
+- Devise para autenticação
+- Bootstrap para Styling
+- Sqlite3
+´´´
+= Instalação normal
 
 No terminal, executar os seguintes comantos depois de baixar o projeto:
 
