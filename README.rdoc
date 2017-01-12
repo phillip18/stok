@@ -1,28 +1,21 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Sistema para controle de almoxarifado com as seguintes funcionalidades:
 
-Things you may want to cover:
+Cadastro de usuário (login e senha)
+Após efetuado o login o usuário poderá:
+Criar, listar, apagar e editar um material
+Dar entrada no materialRetirar material
+Ao adicionar ou retirar é salvo um log de alterações informando qual o usuário responsável, material e quantidade retirada/adicionada
 
-* Ruby version
+## Utilizamos:
 
-* System dependencies
+Devise para autenticação
+Bootstrap para Styling
+Sqlite
 
-* Configuration
+## Instalação normal
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+bundle install
+rake db:migrate
+rails server
