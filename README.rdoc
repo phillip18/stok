@@ -6,7 +6,7 @@
 - Criar, listar, apagar e editar um material
 - Adicionar material
 - Retirar material
-- Ao adicionar ou retirar um material é salvo no log, o usuário responsável, material e quantidade retirada/adicionada
+- Log de entrada e saída informando o usuário responsável, material e quantidade retirada/adicionada
 
 = Utilizamos
 
