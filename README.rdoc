@@ -1,16 +1,18 @@
-== Sistema para controle de almoxarifado com as seguintes funcionalidades:
+== Sistema para controle de almoxarifado com as seguintes funcionalidades
 
 -  Cadastro de usuário (login e senha).    
-Após efetuado o login o usuário poderá:
+   Após efetuado o login o usuário poderá:
 -  Criar, listar, apagar e editar um material
 -  Dar entrada no materialRetirar material
--  Ao adicionar ou retirar um material é salvo no log de alterações informando qual o usuário responsável, material e quantidade retirada/adicionada
+-  Ao adicionar ou retirar um material é salvo no log  
+   de alterações informando qual o usuário responsável,  
+   material e quantidade retirada/adicionada
 
-== Utilizamos:
+== Utilizamos
 
 -  Devise para autenticação
 -  Bootstrap para Styling
--  Sqlite
+-  Sqlite3
 
 == Instalação normal
 
