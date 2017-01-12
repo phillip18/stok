@@ -2,15 +2,11 @@
 
 - Cadastro de usuário (login e senha)
 
-  Após efetuado o login o usuário poderá:  
+  Após efetuado login, o usuário poderá:  
 - Criar, listar, apagar e editar um material
-- Entrar com material
+- Adicionar material
 - Retirar material
-- Ao adicionar ou retirar um material é salvo no log
-
-  de alterações informando qual o usuário responsável
-  
-  material e quantidade retirada/adicionada
+- Ao adicionar ou retirar um material é salvo no log, o usuário responsável, material e quantidade retirada/adicionada
 
 = Utilizamos
 
@@ -20,7 +16,7 @@
 
 = Instalação normal
 
-No terminal, executar os seguintes comantos depois de baixar o projeto:
+No terminal, executar os seguintes comandos após baixar o projeto:
 
 -  bundle install
 -  rake db:migrate
