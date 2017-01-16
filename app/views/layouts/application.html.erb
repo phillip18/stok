@@ -4,31 +4,37 @@
   <title>Stok</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <%= csrf_meta_tags %>
 </head>
 
 <body>
 
-	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <nav class="navbar navbar-default">
+          <div class="container">
+            <div class="navbar-header">
+              <%= link_to "Stok", root_path, class: "navbar-brand" %>
+            </div>
+              <ul class="nav navbar-nav navbar-right">
+                <% if current_user.present?%>
+                  <li> <%= link_to "Sign Out", destroy_user_session_path, method: :delete %> </li>
+                <% else %>
+                  <li><%= link_to "Log In", new_user_session_path %></li>
+                  <li><%= link_to "Join!", new_user_registration_path %></li>
+                <% end %>
+              </ul>
+            <% if user_signed_in?%>
+              <%= link_to "New Material", new_material_path, class: "navbar-text navbar-link" %>
+            <% end %>
+          </div>
+      </nav>
 
-	<nav class="navbar-inverse">
-		<p class="">
-		  	<ul">
-				<li><%= link_to "Stok", root_path %></li>
-		  		
-		  		<% if user_signed_in? %>
-			  		<li><%= link_to "New Material", new_material_path %> </li>
-			  		<li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
-			  	<% else %>
-			  		<li><%= link_to "Join!", new_user_registration_path%> </li>
-			  		<li><%= link_to "Sign In", new_user_session_path %> </li>
-			  	<% end %>
-		  	</ul>
-		</p>
-	</nav>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
 
-	<%= yield %>
+      <div class="container">
+        <%= yield %>
+      </div>
 
 </body>
 </html>

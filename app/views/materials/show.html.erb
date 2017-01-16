@@ -1,12 +1,14 @@
-<div>
-	<ul>
-		
-	<li> Name: <%= @material.nome %> </li>
-	<li> Quantity <%= @material.quantity %> </li>
-	
-	</ul>
-		<%= link_to 'Edit', edit_material_path(@material, class: "btn btn-info") %> |
-		<%= link_to 'Delete', material_path(@material), method: :delete, data: {confirm: "Are you sure?", class: "btn btn-danger"} %>
-	</p>
+<div class="col-md-10 col-md-offset-1">
+
+	<h3> Name: <%= @material.nome %> </h3>
+	<p> Quantity <%= @material.quantity %> </p>
+
+	<div class="col-md-4 col-md-offset-4">
+		<%= link_to "Back", root_path, class: "btn btn-danger" %>
+		<%= link_to 'Edit', edit_material_path(@material), class: "btn btn-info" %>
+		<% if @material.quantity == 0%>
+			<%= link_to 'Delete', material_path(@material), method: :delete, data: {confirm: "Are you sure?"}, class: "btn btn-danger" %>
+		<%end%>
+	</di>
 
 </div>
